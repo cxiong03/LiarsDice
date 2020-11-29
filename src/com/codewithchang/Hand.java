@@ -20,13 +20,21 @@ public class Hand {
         }
     }
 
-    public void roll(Random rand, int dieChoice) {
-        dice.get(dieChoice).roll(rand);
-    }
+//    public void roll(Random rand, int dieChoice) {
+//        dice.get(dieChoice).roll(rand);
+//    }
+//
+//    public void roll(Random rand, List<Integer> dieChoices) {
+//        for (int choice : dieChoices) {
+//            roll(rand, choice);
+//        }
+//    }
 
-    public void roll(Random rand, List<Integer> dieChoices) {
-        for (int choice : dieChoices) {
-            roll(rand, choice);
+    public List<Integer> getDice() {
+        List<Integer> values = new ArrayList<>();
+        for (var die : dice) {
+            values.add(die.getValue());
         }
+        return values;
     }
 }
