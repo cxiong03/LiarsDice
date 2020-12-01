@@ -17,7 +17,7 @@ public class LiarsDiceConsole extends Console {
 
     static public String claimDice() {
         System.out.println("Claim how many dice are in the roll");
-        String input = scanner.next();
+        String input = scanner.nextLine();
         return input;
     }
 }
